@@ -9,10 +9,17 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import java.awt.Insets;
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 
 public class Main extends JFrame {
 
 	private JPanel contentPane;
+	private JTable table;
 
 	/**
 	 * Launch the application.
@@ -35,7 +42,7 @@ public class Main extends JFrame {
 	 */
 	public Main() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 735, 622);
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -68,8 +75,37 @@ public class Main extends JFrame {
 		mnHjlp.add(mntmOmProgrammet);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(446, 100, 271, 488);
+		contentPane.add(scrollPane);
+		
+		String columnNames[] = {"Medlemmar"};
+		String dataValues[][] = 
+			{
+					{"Anders Andersson"},
+					{"Beata Birgersson"},
+					{"Claes Carlsson"},
+					{"David Danielsson"},
+					{"Emilia Eskilsson"},
+					{"Fredrik Fredrisksson"},
+					{"Gunvor Granlund"},
+					{"Hans Hjelte"},
+					{"Iris Is"},
+					{"Janne Jarl"},
+					{"Karin Knutsson"},
+					{"Lena Latman"},
+				
+			};
+		
+		table = new JTable(dataValues, columnNames);
+		scrollPane.setViewportView(table);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon(Main.class.getResource("/se/mah/lisa_b/images/AA.png")));
+		label.setBounds(6, 6, 343, 57);
+		contentPane.add(label);
 	}
-
 }
