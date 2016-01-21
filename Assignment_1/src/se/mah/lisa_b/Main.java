@@ -26,6 +26,7 @@ import com.jgoodies.forms.layout.RowSpec;
 import com.jgoodies.forms.layout.FormSpecs;
 import javax.swing.JTextArea;
 import com.jgoodies.forms.factories.DefaultComponentFactory;
+import javax.swing.JButton;
 
 public class Main extends JFrame {
 
@@ -153,6 +154,10 @@ public class Main extends JFrame {
 				FormSpecs.RELATED_GAP_ROWSPEC,
 				FormSpecs.DEFAULT_ROWSPEC,
 				FormSpecs.RELATED_GAP_ROWSPEC,
+				FormSpecs.DEFAULT_ROWSPEC,
+				FormSpecs.RELATED_GAP_ROWSPEC,
+				FormSpecs.DEFAULT_ROWSPEC,
+				FormSpecs.RELATED_GAP_ROWSPEC,
 				FormSpecs.DEFAULT_ROWSPEC,}));
 		
 		JLabel lblNamn = new JLabel("Namn");
@@ -211,5 +216,8 @@ public class Main extends JFrame {
 		JLabel label_1 = new JLabel("");
 		label_1.setIcon(new ImageIcon(Main.class.getResource("/se/mah/lisa_b/images/andrew.png")));
 		panel.add(label_1, "4, 16");
+		
+		JButton btnSpara = new JButton("Spara");
+		panel.add(btnSpara, "2, 20, 3, 1");
 	}
 }
