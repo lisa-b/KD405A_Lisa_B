@@ -1,42 +1,23 @@
 package se.mah.lisa_b;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import java.util.ArrayList;
+import java.util.Random;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
+public class Uppgift_2{
 
-public class Main extends JFrame {
-
-	private JPanel contentPane;
-
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Main frame = new Main();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+		System.out.println("Uppgift 2");
+		
+		Random rand = new Random();
+		ArrayList<Bike> cyklarna = new ArrayList<Bike>();
+		
+		for(int i = 0; i < 10; i++){
+			cyklarna.add(new Bike(rand.nextInt(30001), Constants.COLOR[rand.nextInt(3)], rand.nextInt(21)+8));
+		}
+		
+		for(Bike cykel: cyklarna){
+			System.out.println("Pris: " + cykel.getPrice() + " Färg: " + cykel.getColor() + " Storlek: " + cykel.getSize());
+		}
 	}
-
-	/**
-	 * Create the frame.
-	 */
-	public Main() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
-		setContentPane(contentPane);
-	}
-
+	
 }
