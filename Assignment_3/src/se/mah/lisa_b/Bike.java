@@ -50,7 +50,7 @@ public class Bike {
 	
 	public void setColor(String color){
 		for(int i = 0; i<Constants.COLOR.length; i++){
-			if (Constants.COLOR[i] == color){
+			if (Constants.COLOR[i].equals(color)){
 				_color = color;
 			}
 		}
