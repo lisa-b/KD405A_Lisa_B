@@ -45,7 +45,7 @@ public class BikeStoreGUI extends JFrame {
 	 */
 	public BikeStoreGUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 505, 606);
+		setBounds(100, 100, 393, 606);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(238, 238, 238));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -53,6 +53,7 @@ public class BikeStoreGUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JTextArea txtrILager = new JTextArea();
+		txtrILager.setEditable(false);
 		txtrILager.setBounds(33, 86, 316, 297);
 		contentPane.add(txtrILager);
 		
