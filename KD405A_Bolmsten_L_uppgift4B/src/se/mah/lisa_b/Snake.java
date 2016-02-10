@@ -14,7 +14,7 @@ public class Snake extends Animal {
 		
 		info = "The snake named " + this.getFriendlyName() + " lat: " + this.getLatinName();
 		
-		if (this.poisonus) {
+		if (this.isPoisonus()) {
 			info = info + " is poisonus";
 		}
 		else {

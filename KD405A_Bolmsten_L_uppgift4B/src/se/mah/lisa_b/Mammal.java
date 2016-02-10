@@ -1,16 +1,16 @@
 package se.mah.lisa_b;
 
 public abstract class Mammal extends Animal {
+	private int gestationTime;
 
-	public Mammal(String latinName) {
+	public Mammal(String latinName, int gestationTime) {
 		super(latinName);
-		// TODO Auto-generated constructor stub
+		this.gestationTime = gestationTime;
 	}
 
-	@Override
-	public String getInfo() {
-		// TODO Auto-generated method stub
-		return null;
+	public int getGestationtime(){
+		return this.gestationTime;
 	}
+
 
 }
