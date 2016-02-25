@@ -1,0 +1,22 @@
+2: XML
+
+ 1. Mellan vilka stationer sker sökningen
+ Från "Malmö C" till "Lund C"
+
+ 2. Hur ser en QueryString ut om man bara vill ha 5 resultatet för sökningen (Titta i xsd filen för sökningen)?
+ ?cmdaction=next&selPointFr=0|80000|0&selPointTo=0|81216|0&NoOf=5
+
+ 3. Vilka delar av resan beskriver dessa taggar: <Journeys></Journeys>, <Journey></Jouney>,<RouteLinks></RouteLinks>,
+>,<RouteLink></RouteLink>? Placera dem även korrekt hierarkiskt.
+
+ <Journeys>  Innehåller resorna 
+ 	<Journey>  En resa som matchar frågan
+ 		<RouteLinks>  Innehåller delarna av resan
+ 			<RouteLink>  En delsträcka av resan
+
+
+ 4. Vilken XML-tagg innehåller antal byte för en resa och under vilken huvudtagg är den taggen placerad?
+ <NoOfChanges> ligger i <Journey>
+
+ 5. Ge exempel på en XML tagg som inte finns implementerad i det API du laddade ner
+ Förstår tyvärr inte frågan.
