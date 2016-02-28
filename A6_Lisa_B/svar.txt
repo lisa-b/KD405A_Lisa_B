@@ -19,4 +19,4 @@
  <NoOfChanges> ligger i <Journey>
 
  5. Ge exempel på en XML tagg som inte finns implementerad i det API du laddade ner
- Förstår tyvärr inte frågan.
+ <Distance> i <Journey>
